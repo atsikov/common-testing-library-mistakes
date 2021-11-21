@@ -5,13 +5,11 @@ describe.skip('should pass', () => {
   it('should render transaction details', async () => {
     render(<TransactionsWithDetails />)
 
-    await waitFor(() => {
-      fireEvent.click(screen.getByText('one', { exact: false }))
-    })
+    fireEvent.click(await screen.findByText('Id: one'))
 
     await waitFor(() => {
-      expect(screen.getByText('Coffee', { exact: false })).not.toBeNull()
-      expect(screen.getByText('Mega Mall one', { exact: false })).not.toBeNull()
+      expect(screen.getByText('Description: Coffee')).not.toBeNull()
+      expect(screen.getByText('Merchant: Mega Mall one')).not.toBeNull()
     })
   })
 })

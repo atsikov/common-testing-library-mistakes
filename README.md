@@ -7,6 +7,10 @@ Each case (except "unneeded act") contains three test suites:
 * `red.test.tsx` - slightly changed `yellow` test suite which fails
 * `green.test.tsx` - correct stable version of `yellow` test suite
 
+All tests except `yellow`s are turned off, please remove `describe.skip` to check the behavior.
+
+Use `yarn test:a` to `yarn test:e` commands to run tests for the specific case.
+
 ## Cases
 
 ### await on sync methods

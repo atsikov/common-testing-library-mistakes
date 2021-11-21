@@ -22,7 +22,7 @@ export const Transactions = () => {
             )
           }
         >
-          <div>Id:{tx.id}</div>
+          <div>Id: {tx.id}</div>
           {selectedTransactionId === tx.id && (
             <TransactionDetails description={tx.description} />
           )}

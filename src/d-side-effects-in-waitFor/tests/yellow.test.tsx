@@ -6,8 +6,9 @@ describe('should pass', () => {
     render(<Transactions />)
 
     await waitFor(() => {
-      fireEvent.click(screen.getByText('one', { exact: false }))
-      expect(screen.getByText('Coffee', { exact: false })).not.toBeNull()
+      fireEvent.click(screen.getByText('Id: one'))
+      expect(screen.getByText('Description: Coffee')).not.toBeNull()
     })
   })
 })
+  

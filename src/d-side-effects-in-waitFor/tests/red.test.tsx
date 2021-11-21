@@ -6,7 +6,7 @@ describe.skip('should hang', () => {
     render(<TransactionsWithDetails />)
 
     await waitFor(() => {
-      fireEvent.click(screen.getByText('one', { exact: false }))
+      fireEvent.click(screen.getByText('Id: one', { exact: false }))
       expect(screen.getByText('Coffee', { exact: false })).not.toBeNull()
       expect(screen.getByText('Mega Mall one', { exact: false })).not.toBeNull()
     })
